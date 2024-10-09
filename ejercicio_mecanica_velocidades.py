@@ -1,3 +1,5 @@
+#! usr/bin/python3
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -10,14 +12,14 @@ el siguiente código resuelve el siguiente ejercicio:
 a) Si la piedra más rápida tarda 10 seg en regresar al suelo, ¿cuánto tiempo le tomará regresar a la piedra más lenta? 
 b) Si la piedra más lenta alcanza una altura máxima de H, ¿a qué altura (en términos de H) llegará la piedra más rápida? Suponga caida libre
 """
-g=9.8 #m/s
+g=9.8 #m/s^2
 tf=10 #seg lo que tarda en llegar al suelo
 vo1=g*tf/6 #m/s
 vo2=3*vo1 #m/s
 t1=np.linspace(0,2*vo1/g,100) #seg
 t2=np.linspace(0,tf,100) #seg
 
-# definir funcion de la posición de la piedra 1
+# definir funcion de la posición para cualquier piedra
 def hf(t,g,v):
     return(v*t-g*t**2/2)
 
